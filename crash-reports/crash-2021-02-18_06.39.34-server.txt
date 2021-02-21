@@ -1,0 +1,73 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 2/18/21 6:39 AM
+Description: Exception in server tick loop
+
+java.lang.NullPointerException: Exception in server tick loop
+	at me.desht.pneumaticcraft.common.inventory.ContainerMinigunMagazine.func_75134_a(ContainerMinigunMagazine.java:41) ~[pneumaticcraft:1.16.4-2.7.2-86] {re:classloading}
+	at net.minecraft.entity.player.PlayerEntity.remove(PlayerEntity.java:1239) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:computing_frames,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld.removePlayer(ServerWorld.java:967) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld.func_217434_e(ServerWorld.java:964) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.management.PlayerList.func_72367_e(PlayerList.java:338) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.network.play.ServerPlayNetHandler.func_147231_a(ServerPlayNetHandler.java:1021) ~[?:?] {re:classloading}
+	at net.minecraft.network.NetworkManager.func_179293_l(NetworkManager.java:368) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.network.NetworkSystem.func_151269_c(NetworkSystem.java:149) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:864) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:291) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:786) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:641) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:232) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_281] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_281, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 563717848 bytes (537 MB) / 1068498944 bytes (1019 MB) up to 1068498944 bytes (1019 MB)
+	CPUs: 4
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmlserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.10.jar fml TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.10
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		forge-1.16.4-35.1.10-server.jar                   |Minecraft                     |minecraft                     |1.16.4              |DONE      |NOSIGNATURE
+		FallingTree-Forge-1.16.4-2.7.0.jar                |Falling Tree                  |falling_tree                  |2.7.0               |DONE      |NOSIGNATURE
+		forge-1.16.4-35.1.10-universal.jar                |Forge                         |forge                         |35.1.10             |DONE      |22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		Aquaculture-1.16.4-2.1.6.jar                      |Aquaculture 2                 |aquaculture                   |1.16.4-2.1.6        |DONE      |NOSIGNATURE
+		pneumaticcraft-repressurized-1.16.4-2.7.2-86.jar  |PneumaticCraft: Repressurized |pneumaticcraft                |1.16.4-2.7.2-86     |DONE      |NOSIGNATURE
+		BiomesOPlenty-1.16.4-13.0.0.422-universal.jar     |Biomes O' Plenty              |biomesoplenty                 |1.16.4-13.0.0.422   |DONE      |NOSIGNATURE
+		Apotheosis-1.16.3-4.4.1.jar                       |Apotheosis                    |apotheosis                    |4.4.1               |DONE      |NOSIGNATURE
+		cc-tweaked-1.16.4-1.94.0.jar                      |CC: Tweaked                   |computercraft                 |1.94.0              |DONE      |NOSIGNATURE
+		infernalmobs-1.16.2.1.jar                         |Infernal Mobs                 |infernalmobs                  |1.16.2.1            |DONE      |NOSIGNATURE
+		Placebo-1.16.3-4.3.3.jar                          |Placebo                       |placebo                       |4.3.3               |DONE      |NOSIGNATURE
+		comforts-forge-1.16.4-4.0.0.2.jar                 |Comforts                      |comforts                      |1.16.4-4.0.0.2      |DONE      |NOSIGNATURE
+		TravelersBackpack-1.16.4-5.3.1.jar                |Traveler's Backpack           |travelersbackpack             |5.3.1               |DONE      |NOSIGNATURE
+		sit-1.16.2-v1.3.jar                               |Sit                           |sit                           |v1.3                |DONE      |NOSIGNATURE
+	Crash Report UUID: 404b7261-60a2-49bb-b2de-9d7dc5ec950d
+	Player Count: 2 / 20; [ServerPlayerEntity['imAcedia'/187, l='ServerLevel[world]', x=-641.28, y=102.00, z=596.71], ServerPlayerEntity['Elaneli'/11312, l='ServerLevel[world]', x=-644.40, y=102.00, z=602.85]]
+	Data Packs: vanilla, mod:forge, mod:aquaculture (incompatible), mod:computercraft, mod:comforts (incompatible), mod:pneumaticcraft, mod:biomesoplenty, mod:apotheosis (incompatible), mod:infernalmobs (incompatible), mod:placebo (incompatible), mod:sit, mod:travelersbackpack (incompatible), mod:falling_tree
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)

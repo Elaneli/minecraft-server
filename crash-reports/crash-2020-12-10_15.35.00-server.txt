@@ -1,0 +1,521 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 10/12/20 15:35
+Description: Watching Server
+
+java.lang.Error: ServerHangWatchdog detected that a single server tick took 60,02 seconds (should be max 0.05)
+	at java.lang.String.intern(Native Method) ~[?:1.8.0_241] {}
+	at net.minecraft.util.RegistryKey.func_240905_a_(RegistryKey.java:23) ~[?:?] {re:classloading}
+	at net.minecraft.util.RegistryKey.func_240903_a_(RegistryKey.java:15) ~[?:?] {re:classloading}
+	at biomesoplenty.common.util.biome.BiomeUtil.createKey(BiomeUtil.java:27) ~[biomesoplenty:?] {re:classloading}
+	at biomesoplenty.common.world.layer.BOPShoreLayer.func_202748_a(BOPShoreLayer.java:55) ~[biomesoplenty:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.ICastleTransformer.func_215728_a(SourceFile:12) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1.func_202711_b(SourceFile:13) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1$$Lambda$4755/2072223360.apply(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:26) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.ZoomLayer.func_215728_a(SourceFile:41) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1.func_202711_b(SourceFile:13) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1$$Lambda$4755/2072223360.apply(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:26) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.ZoomLayer.func_215728_a(SourceFile:41) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1.func_202711_b(SourceFile:13) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1$$Lambda$4755/2072223360.apply(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:26) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.ICastleTransformer.func_215728_a(SourceFile:16) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1.func_202711_b(SourceFile:13) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1$$Lambda$4755/2072223360.apply(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:26) ~[?:?] {re:classloading}
+	at biomesoplenty.common.world.layer.BOPRiverMixLayer.func_215723_a(BOPRiverMixLayer.java:37) ~[biomesoplenty:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer2.func_215724_a(SourceFile:15) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer2$$Lambda$4756/1182869304.apply(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:26) ~[?:?] {re:classloading}
+	at biomesoplenty.common.world.layer.BOPMixOceansLayer.applyPixel(BOPMixOceansLayer.java:28) ~[biomesoplenty:?] {re:classloading}
+	at biomesoplenty.common.world.layer.traits.IAreaTransformer3.lambda$null$0(IAreaTransformer3.java:29) ~[biomesoplenty:?] {re:classloading}
+	at biomesoplenty.common.world.layer.traits.IAreaTransformer3$$Lambda$5709/1028508464.apply(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:26) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.Layer.func_242936_a(SourceFile:23) ~[?:?] {re:classloading}
+	at biomesoplenty.common.world.BOPBiomeProvider.func_225526_b_(BOPBiomeProvider.java:70) ~[biomesoplenty:?] {re:classloading}
+	at net.minecraft.world.biome.BiomeContainer.<init>(SourceFile:87) ~[?:?] {re:classloading}
+	at net.minecraft.world.chunk.storage.ChunkSerializer.func_222656_a(ChunkSerializer.java:70) ~[?:?] {re:classloading}
+	at net.minecraft.world.server.ChunkManager.lambda$chunkLoad$14(ChunkManager.java:480) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ChunkManager$$Lambda$5903/133912477.get(Unknown Source) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_241] {}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(SourceFile:144) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerChunkProvider$ChunkExecutor.func_213166_h(SourceFile:545) ~[?:?] {re:classloading}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(SourceFile:118) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerChunkProvider$ChunkExecutor.func_213168_p(SourceFile:554) ~[?:?] {re:classloading}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213161_c(SourceFile:127) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerChunkProvider.func_212849_a_(SourceFile:141) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.World.func_217353_a(World.java:167) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.world.IWorldReader.func_217348_a(IWorldReader.java:112) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.gen.feature.structure.Structure.func_236388_a_(Structure.java:161) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.func_235956_a_(SourceFile:206) ~[?:?] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.func_241117_a_(ServerWorld.java:1137) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.loot.functions.ExplorationMap.func_215859_a(SourceFile:72) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootFunction.apply(SourceFile:31) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootFunction.apply(SourceFile:20) ~[?:?] {re:classloading}
+	at net.minecraft.loot.functions.ILootFunction.func_215857_a(SourceFile:14) ~[?:?] {re:classloading}
+	at net.minecraft.loot.functions.ILootFunction$$Lambda$6796/738275520.accept(Unknown Source) ~[?:?] {}
+	at net.minecraft.loot.ItemLootEntry.func_216154_a(SourceFile:33) ~[?:?] {re:classloading}
+	at net.minecraft.loot.StandaloneLootEntry$1.func_216188_a(SourceFile:59) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootPool.func_216095_b(LootPool.java:74) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.loot.LootPool.func_216091_a(LootPool.java:90) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.loot.LootTable.func_216114_a(LootTable.java:68) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootTable.func_216120_b(LootTable.java:80) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootTable.func_216113_a(LootTable.java:85) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootTable.func_216118_a(LootTable.java:106) ~[?:?] {re:classloading}
+	at net.minecraft.tileentity.LockableLootTileEntity.func_184281_d(SourceFile:81) ~[?:?] {re:classloading}
+	at net.minecraft.tileentity.LockableLootTileEntity.createMenu(SourceFile:159) ~[?:?] {re:classloading}
+	at net.minecraft.entity.player.ServerPlayerEntity.func_213829_a(ServerPlayerEntity.java:889) ~[?:?] {re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at net.minecraft.block.ChestBlock.func_225533_a_(SourceFile:205) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.block.AbstractBlock$AbstractBlockState.func_227031_a_(AbstractBlock.java:638) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.management.PlayerInteractionManager.func_219441_a(PlayerInteractionManager.java:338) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.network.play.ServerPlayNetHandler.func_184337_a(ServerPlayNetHandler.java:958) ~[?:?] {re:classloading}
+	at net.minecraft.network.play.client.CPlayerTryUseItemOnBlockPacket.func_148833_a(SourceFile:36) ~[?:?] {re:classloading}
+	at net.minecraft.network.play.client.CPlayerTryUseItemOnBlockPacket.func_148833_a(SourceFile:10) ~[?:?] {re:classloading}
+	at net.minecraft.network.PacketThreadUtil.func_225383_a(SourceFile:21) ~[?:?] {re:classloading}
+	at net.minecraft.network.PacketThreadUtil$$Lambda$6626/818255974.run(Unknown Source) ~[?:?] {}
+	at net.minecraft.util.concurrent.TickDelayedTask.run(SourceFile:18) ~[?:?] {re:classloading}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(SourceFile:144) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.util.concurrent.RecursiveEventLoop.func_213166_h(SourceFile:23) ~[?:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.func_213166_h(MinecraftServer.java:733) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_213166_h(MinecraftServer.java:159) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(SourceFile:118) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_213205_aW(MinecraftServer.java:716) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_213168_p(MinecraftServer.java:710) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213160_bf(SourceFile:103) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_213202_o(MinecraftServer.java:695) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:645) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:232) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer$$Lambda$5796/1844710204.run(Unknown Source) ~[?:?] {}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_241] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at java.lang.String.intern(Native Method) ~[?:1.8.0_241] {}
+	at net.minecraft.util.RegistryKey.func_240905_a_(RegistryKey.java:23) ~[?:?] {re:classloading}
+	at net.minecraft.util.RegistryKey.func_240903_a_(RegistryKey.java:15) ~[?:?] {re:classloading}
+	at biomesoplenty.common.util.biome.BiomeUtil.createKey(BiomeUtil.java:27) ~[biomesoplenty:?] {re:classloading}
+	at biomesoplenty.common.world.layer.BOPShoreLayer.func_202748_a(BOPShoreLayer.java:55) ~[biomesoplenty:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.ICastleTransformer.func_215728_a(SourceFile:12) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1.func_202711_b(SourceFile:13) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1$$Lambda$4755/2072223360.apply(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:26) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.ZoomLayer.func_215728_a(SourceFile:41) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1.func_202711_b(SourceFile:13) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1$$Lambda$4755/2072223360.apply(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:26) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.ZoomLayer.func_215728_a(SourceFile:41) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1.func_202711_b(SourceFile:13) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1$$Lambda$4755/2072223360.apply(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:26) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.ICastleTransformer.func_215728_a(SourceFile:16) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1.func_202711_b(SourceFile:13) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1$$Lambda$4755/2072223360.apply(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:26) ~[?:?] {re:classloading}
+	at biomesoplenty.common.world.layer.BOPRiverMixLayer.func_215723_a(BOPRiverMixLayer.java:37) ~[biomesoplenty:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer2.func_215724_a(SourceFile:15) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer2$$Lambda$4756/1182869304.apply(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:26) ~[?:?] {re:classloading}
+	at biomesoplenty.common.world.layer.BOPMixOceansLayer.applyPixel(BOPMixOceansLayer.java:28) ~[biomesoplenty:?] {re:classloading}
+	at biomesoplenty.common.world.layer.traits.IAreaTransformer3.lambda$null$0(IAreaTransformer3.java:29) ~[biomesoplenty:?] {re:classloading}
+	at biomesoplenty.common.world.layer.traits.IAreaTransformer3$$Lambda$5709/1028508464.apply(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.gen.area.LazyArea.func_202678_a(SourceFile:26) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.layer.Layer.func_242936_a(SourceFile:23) ~[?:?] {re:classloading}
+	at biomesoplenty.common.world.BOPBiomeProvider.func_225526_b_(BOPBiomeProvider.java:70) ~[biomesoplenty:?] {re:classloading}
+	at net.minecraft.world.biome.BiomeContainer.<init>(SourceFile:87) ~[?:?] {re:classloading}
+	at net.minecraft.world.chunk.storage.ChunkSerializer.func_222656_a(ChunkSerializer.java:70) ~[?:?] {re:classloading}
+	at net.minecraft.world.server.ChunkManager.lambda$chunkLoad$14(ChunkManager.java:480) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ChunkManager$$Lambda$5903/133912477.get(Unknown Source) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_241] {}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(SourceFile:144) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerChunkProvider$ChunkExecutor.func_213166_h(SourceFile:545) ~[?:?] {re:classloading}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(SourceFile:118) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerChunkProvider$ChunkExecutor.func_213168_p(SourceFile:554) ~[?:?] {re:classloading}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213161_c(SourceFile:127) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerChunkProvider.func_212849_a_(SourceFile:141) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.World.func_217353_a(World.java:167) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.world.IWorldReader.func_217348_a(IWorldReader.java:112) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.gen.feature.structure.Structure.func_236388_a_(Structure.java:161) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.func_235956_a_(SourceFile:206) ~[?:?] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.func_241117_a_(ServerWorld.java:1137) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.loot.functions.ExplorationMap.func_215859_a(SourceFile:72) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootFunction.apply(SourceFile:31) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootFunction.apply(SourceFile:20) ~[?:?] {re:classloading}
+	at net.minecraft.loot.functions.ILootFunction.func_215857_a(SourceFile:14) ~[?:?] {re:classloading}
+	at net.minecraft.loot.functions.ILootFunction$$Lambda$6796/738275520.accept(Unknown Source) ~[?:?] {}
+	at net.minecraft.loot.ItemLootEntry.func_216154_a(SourceFile:33) ~[?:?] {re:classloading}
+	at net.minecraft.loot.StandaloneLootEntry$1.func_216188_a(SourceFile:59) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootPool.func_216095_b(LootPool.java:74) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.loot.LootPool.func_216091_a(LootPool.java:90) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.loot.LootTable.func_216114_a(LootTable.java:68) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootTable.func_216120_b(LootTable.java:80) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootTable.func_216113_a(LootTable.java:85) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootTable.func_216118_a(LootTable.java:106) ~[?:?] {re:classloading}
+	at net.minecraft.tileentity.LockableLootTileEntity.func_184281_d(SourceFile:81) ~[?:?] {re:classloading}
+	at net.minecraft.tileentity.LockableLootTileEntity.createMenu(SourceFile:159) ~[?:?] {re:classloading}
+	at net.minecraft.entity.player.ServerPlayerEntity.func_213829_a(ServerPlayerEntity.java:889) ~[?:?] {re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at net.minecraft.block.ChestBlock.func_225533_a_(SourceFile:205) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.block.AbstractBlock$AbstractBlockState.func_227031_a_(AbstractBlock.java:638) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.management.PlayerInteractionManager.func_219441_a(PlayerInteractionManager.java:338) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.network.play.ServerPlayNetHandler.func_184337_a(ServerPlayNetHandler.java:958) ~[?:?] {re:classloading}
+	at net.minecraft.network.play.client.CPlayerTryUseItemOnBlockPacket.func_148833_a(SourceFile:36) ~[?:?] {re:classloading}
+	at net.minecraft.network.play.client.CPlayerTryUseItemOnBlockPacket.func_148833_a(SourceFile:10) ~[?:?] {re:classloading}
+	at net.minecraft.network.PacketThreadUtil.func_225383_a(SourceFile:21) ~[?:?] {re:classloading}
+	at net.minecraft.network.PacketThreadUtil$$Lambda$6626/818255974.run(Unknown Source) ~[?:?] {}
+	at net.minecraft.util.concurrent.TickDelayedTask.run(SourceFile:18) ~[?:?] {re:classloading}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(SourceFile:144) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.util.concurrent.RecursiveEventLoop.func_213166_h(SourceFile:23) ~[?:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.func_213166_h(MinecraftServer.java:733) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_213166_h(MinecraftServer.java:159) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(SourceFile:118) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_213205_aW(MinecraftServer.java:716) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_213168_p(MinecraftServer.java:710) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213160_bf(SourceFile:103) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_213202_o(MinecraftServer.java:695) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:645) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:232) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+-- Thread Dump --
+Details:
+	Threads: "Netty Server IO #6" Id=66 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@24f39545
+	-  locked java.util.Collections$UnmodifiableSet@2a347fab
+	-  locked sun.nio.ch.WindowsSelectorImpl@2e0bfe35
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	...
+
+
+"Netty Server IO #5" Id=65 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@6b097590
+	-  locked java.util.Collections$UnmodifiableSet@53689c09
+	-  locked sun.nio.ch.WindowsSelectorImpl@5a2878e8
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	...
+
+
+"Worker-Main-22" Id=64 RUNNABLE
+	at it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap$EntryIterator.next(Long2ObjectOpenHashMap.java:743)
+	at it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap$EntryIterator.next(Long2ObjectOpenHashMap.java:739)
+	at net.minecraft.world.lighting.SectionLightStorage.func_215522_a(SourceFile:269)
+	at net.minecraft.world.lighting.SkyLightStorage.func_215522_a(SourceFile:168)
+	at net.minecraft.world.lighting.LightEngine.func_215616_a(LightEngine.java:157)
+	at net.minecraft.world.lighting.WorldLightManager.func_215575_a(SourceFile:61)
+	at net.minecraft.world.server.ServerWorldLightManager.func_215603_b(SourceFile:176)
+	at net.minecraft.world.server.ServerWorldLightManager.func_223124_c(SourceFile:155)
+	...
+
+
+"Worker-Main-21" Id=63 WAITING on java.util.concurrent.ForkJoinPool@2ba3cfce
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@2ba3cfce
+	at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+
+
+"Worker-Main-19" Id=61 WAITING on java.util.concurrent.ForkJoinPool@2ba3cfce
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@2ba3cfce
+	at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+
+
+"Netty Server IO #4" Id=56 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@b268adf
+	-  locked java.util.Collections$UnmodifiableSet@1cb9c766
+	-  locked sun.nio.ch.WindowsSelectorImpl@5cf0321
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	...
+
+
+"Netty Server IO #3" Id=52 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@30a761e9
+	-  locked java.util.Collections$UnmodifiableSet@f687550
+	-  locked sun.nio.ch.WindowsSelectorImpl@5db8012c
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	...
+
+
+"Netty Server IO #2" Id=51 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@2013d7b1
+	-  locked java.util.Collections$UnmodifiableSet@2b305273
+	-  locked sun.nio.ch.WindowsSelectorImpl@67be70b0
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	...
+
+
+"Netty Server IO #1" Id=50 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@7a92bc0a
+	-  locked java.util.Collections$UnmodifiableSet@448242b6
+	-  locked sun.nio.ch.WindowsSelectorImpl@6d08339f
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	...
+
+
+"Server Watchdog" Id=49 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:454)
+	at net.minecraft.server.dedicated.ServerHangWatchdog.run(ServerHangWatchdog.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"IO-Worker-11" Id=48 TIMED_WAITING on java.util.concurrent.SynchronousQueue$TransferStack@7927e57e
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.SynchronousQueue$TransferStack@7927e57e
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	...
+
+
+"IO-Worker-10" Id=47 TIMED_WAITING on java.util.concurrent.SynchronousQueue$TransferStack@7927e57e
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.SynchronousQueue$TransferStack@7927e57e
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	...
+
+
+"IO-Worker-9" Id=46 TIMED_WAITING on java.util.concurrent.SynchronousQueue$TransferStack@7927e57e
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.SynchronousQueue$TransferStack@7927e57e
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+	at java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	...
+
+
+"Thread-7" Id=43 RUNNABLE (in native)
+	at sun.nio.fs.WindowsNativeDispatcher.GetQueuedCompletionStatus0(Native Method)
+	at sun.nio.fs.WindowsNativeDispatcher.GetQueuedCompletionStatus(WindowsNativeDispatcher.java:1007)
+	at sun.nio.fs.WindowsWatchService$Poller.run(WindowsWatchService.java:586)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Server IO #0" Id=42 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@16ba64bc
+	-  locked java.util.Collections$UnmodifiableSet@40fb032f
+	-  locked sun.nio.ch.WindowsSelectorImpl@6cc34464
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:756)
+	...
+
+
+"ObjectCleanerThread" Id=41 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@2a095097
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@2a095097
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	at io.netty.util.internal.ObjectCleaner$1.run(ObjectCleaner.java:54)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Server console handler" Id=40 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	-  locked java.io.BufferedInputStream@6f535eee
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	-  locked java.io.InputStreamReader@77a9ca50
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	...
+
+
+"DestroyJavaVM" Id=39 RUNNABLE
+
+
+"Server thread" Id=36 RUNNABLE
+	at java.lang.String.intern(Native Method)
+	at net.minecraft.util.RegistryKey.func_240905_a_(RegistryKey.java:23)
+	at net.minecraft.util.RegistryKey.func_240903_a_(RegistryKey.java:15)
+	at biomesoplenty.common.util.biome.BiomeUtil.createKey(BiomeUtil.java:27)
+	at biomesoplenty.common.world.layer.BOPShoreLayer.func_202748_a(BOPShoreLayer.java:55)
+	at net.minecraft.world.gen.layer.traits.ICastleTransformer.func_215728_a(SourceFile:12)
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1.func_202711_b(SourceFile:13)
+	at net.minecraft.world.gen.layer.traits.IAreaTransformer1$$Lambda$4755/2072223360.apply(Unknown Source)
+	...
+
+
+"Snooper Timer" Id=37 WAITING on java.util.TaskQueue@2f9f79d5
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@2f9f79d5
+	at java.lang.Object.wait(Object.java:502)
+	at java.util.TimerThread.mainLoop(Timer.java:526)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Thread-3" Id=26 RUNNABLE (in native)
+	at sun.nio.fs.WindowsNativeDispatcher.GetQueuedCompletionStatus0(Native Method)
+	at sun.nio.fs.WindowsNativeDispatcher.GetQueuedCompletionStatus(WindowsNativeDispatcher.java:1007)
+	at sun.nio.fs.WindowsWatchService$Poller.run(WindowsWatchService.java:586)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Timer hack thread" Id=21 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.util.Util$6.run(SourceFile:636)
+
+
+"Thread-2" Id=16 RUNNABLE (in native)
+	at sun.nio.fs.WindowsNativeDispatcher.GetQueuedCompletionStatus0(Native Method)
+	at sun.nio.fs.WindowsNativeDispatcher.GetQueuedCompletionStatus(WindowsNativeDispatcher.java:1007)
+	at sun.nio.fs.WindowsWatchService$Poller.run(WindowsWatchService.java:586)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Thread-1" Id=15 TIMED_WAITING
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:338)
+	at com.electronwill.nightconfig.core.file.FileWatcher$WatcherThread.run(FileWatcher.java:190)
+
+
+"Attach Listener" Id=5 RUNNABLE
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 RUNNABLE
+	at sun.security.ssl.SSLSessionImpl.getValueNames(SSLSessionImpl.java:757)
+	at sun.security.ssl.SSLSessionImpl.finalize(SSLSessionImpl.java:869)
+	at java.lang.System$2.invokeFinalize(System.java:1270)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:102)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:34)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:217)
+
+
+"Reference Handler" Id=2 RUNNABLE
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+
+
+Stacktrace:
+	at net.minecraft.server.dedicated.ServerHangWatchdog.run(ServerHangWatchdog.java:56) [?:?] {re:classloading}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_241] {}
+
+
+-- Performance stats --
+Details:
+	Random tick rate: 3
+	Level stats: ResourceKey[minecraft:dimension / minecraft:overworld]: players: 2, entities: 662 [minecraft:chicken:110,minecraft:item:89,minecraft:sheep:64,minecraft:skeleton:43,minecraft:pig:42], block_entities: 222 [minecraft:chest:120,minecraft:mob_spawner:77,minecraft:furnace:12,minecraft:skull:4,minecraft:beehive:3], block_ticks: 335, fluid_ticks: 22, chunk_source: ServerChunkCache: 7241,
+ResourceKey[minecraft:dimension / minecraft:the_nether]: players: 0, entities: 0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: ServerChunkCache: 0,
+ResourceKey[minecraft:dimension / minecraft:the_end]: players: 0, entities: 0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: ServerChunkCache: 0
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 123476304 bytes (117 MB) / 954728448 bytes (910 MB) up to 954728448 bytes (910 MB)
+	CPUs: 4
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmlserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.10.jar fml TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.10
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		forge-1.16.4-35.1.10-server.jar                   |Minecraft                     |minecraft                     |1.16.4              |DONE      |NOSIGNATURE
+		FallingTree-Forge-1.16.4-2.7.0.jar                |Falling Tree                  |falling_tree                  |2.7.0               |DONE      |NOSIGNATURE
+		forge-1.16.4-35.1.10-universal.jar                |Forge                         |forge                         |35.1.10             |DONE      |22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		Aquaculture-1.16.4-2.1.6.jar                      |Aquaculture 2                 |aquaculture                   |1.16.4-2.1.6        |DONE      |NOSIGNATURE
+		pneumaticcraft-repressurized-1.16.4-2.7.2-86.jar  |PneumaticCraft: Repressurized |pneumaticcraft                |1.16.4-2.7.2-86     |DONE      |NOSIGNATURE
+		BiomesOPlenty-1.16.4-13.0.0.422-universal.jar     |Biomes O' Plenty              |biomesoplenty                 |1.16.4-13.0.0.422   |DONE      |NOSIGNATURE
+		Apotheosis-1.16.3-4.4.1.jar                       |Apotheosis                    |apotheosis                    |4.4.1               |DONE      |NOSIGNATURE
+		cc-tweaked-1.16.4-1.94.0.jar                      |CC: Tweaked                   |computercraft                 |1.94.0              |DONE      |NOSIGNATURE
+		infernalmobs-1.16.2.1.jar                         |Infernal Mobs                 |infernalmobs                  |1.16.2.1            |DONE      |NOSIGNATURE
+		Placebo-1.16.3-4.3.3.jar                          |Placebo                       |placebo                       |4.3.3               |DONE      |NOSIGNATURE
+		comforts-forge-1.16.4-4.0.0.2.jar                 |Comforts                      |comforts                      |1.16.4-4.0.0.2      |DONE      |NOSIGNATURE
+		TravelersBackpack-1.16.4-5.3.1.jar                |Traveler's Backpack           |travelersbackpack             |5.3.1               |DONE      |NOSIGNATURE
+		sit-1.16.2-v1.3.jar                               |Sit                           |sit                           |v1.3                |DONE      |NOSIGNATURE
+	Crash Report UUID: 6940a0cc-8d52-4a5f-a172-3b4e50f7faf5
+	Player Count: 2 / 20; [ServerPlayerEntity['Elaneli'/159, l='ServerLevel[world]', x=-858.54, y=55.00, z=419.46], ServerPlayerEntity['_Entity'/282, l='ServerLevel[world]', x=-610.30, y=100.00, z=591.40]]
+	Data Packs: vanilla, mod:forge, mod:aquaculture (incompatible), mod:computercraft, mod:comforts (incompatible), mod:pneumaticcraft, mod:biomesoplenty, mod:apotheosis (incompatible), mod:infernalmobs (incompatible), mod:placebo (incompatible), mod:sit, mod:travelersbackpack (incompatible), mod:falling_tree
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)

@@ -1,0 +1,91 @@
+---- Minecraft Crash Report ----
+// You should try our sister game, Minceraft!
+
+Time: 11/02/21 21:21
+Description: Exception in server tick loop
+
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at it.unimi.dsi.fastutil.longs.Long2ObjectLinkedOpenHashMap.clone(Long2ObjectLinkedOpenHashMap.java:1804) ~[?:?] {re:classloading}
+	at net.minecraft.world.server.ChunkManager.func_219245_b(ChunkManager.java:430) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerChunkProvider.func_217235_l(SourceFile:285) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerChunkProvider.func_217233_c(SourceFile:223) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerChunkProvider.func_212849_a_(SourceFile:140) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.World.func_217353_a(World.java:167) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.world.IWorldReader.func_217348_a(IWorldReader.java:112) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.world.gen.feature.structure.Structure.func_236388_a_(Structure.java:161) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.func_235956_a_(SourceFile:206) ~[?:?] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.func_241117_a_(ServerWorld.java:1137) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.loot.functions.ExplorationMap.func_215859_a(SourceFile:72) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootFunction.apply(SourceFile:31) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootFunction.apply(SourceFile:20) ~[?:?] {re:classloading}
+	at net.minecraft.loot.functions.ILootFunction.func_215857_a(SourceFile:14) ~[?:?] {re:classloading}
+	at net.minecraft.loot.functions.ILootFunction$$Lambda$6765/596234623.accept(Unknown Source) ~[?:?] {}
+	at net.minecraft.loot.ItemLootEntry.func_216154_a(SourceFile:33) ~[?:?] {re:classloading}
+	at net.minecraft.loot.StandaloneLootEntry$1.func_216188_a(SourceFile:59) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootPool.func_216095_b(LootPool.java:67) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.loot.LootPool.func_216091_a(LootPool.java:90) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.loot.LootTable.func_216114_a(LootTable.java:68) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootTable.func_216120_b(LootTable.java:80) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootTable.func_216113_a(LootTable.java:85) ~[?:?] {re:classloading}
+	at net.minecraft.loot.LootTable.func_216118_a(LootTable.java:106) ~[?:?] {re:classloading}
+	at net.minecraft.tileentity.LockableLootTileEntity.func_184281_d(SourceFile:81) ~[?:?] {re:classloading}
+	at net.minecraft.tileentity.LockableLootTileEntity.createMenu(SourceFile:159) ~[?:?] {re:classloading}
+	at net.minecraft.entity.player.ServerPlayerEntity.func_213829_a(ServerPlayerEntity.java:889) ~[?:?] {re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at net.minecraft.block.ChestBlock.func_225533_a_(SourceFile:205) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.block.AbstractBlock$AbstractBlockState.func_227031_a_(AbstractBlock.java:638) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.management.PlayerInteractionManager.func_219441_a(PlayerInteractionManager.java:338) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.network.play.ServerPlayNetHandler.func_184337_a(ServerPlayNetHandler.java:958) ~[?:?] {re:classloading}
+	at net.minecraft.network.play.client.CPlayerTryUseItemOnBlockPacket.func_148833_a(SourceFile:36) ~[?:?] {re:classloading}
+	at net.minecraft.network.play.client.CPlayerTryUseItemOnBlockPacket.func_148833_a(SourceFile:10) ~[?:?] {re:classloading}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_241, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 119856416 bytes (114 MB) / 954728448 bytes (910 MB) up to 954728448 bytes (910 MB)
+	CPUs: 4
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	ModLauncher: 8.0.6+85+master.325de55
+	ModLauncher launch target: fmlserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-3.0.5-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.2.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.4-35.1.10.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.4-35.1.10.jar fml TRANSFORMATIONSERVICE 
+	FML: 35.1
+	Forge: net.minecraftforge:35.1.10
+	FML Language Providers: 
+		javafml@35.1
+		minecraft@1
+	Mod List: 
+		forge-1.16.4-35.1.10-server.jar                   |Minecraft                     |minecraft                     |1.16.4              |DONE      |NOSIGNATURE
+		FallingTree-Forge-1.16.4-2.7.0.jar                |Falling Tree                  |falling_tree                  |2.7.0               |DONE      |NOSIGNATURE
+		forge-1.16.4-35.1.10-universal.jar                |Forge                         |forge                         |35.1.10             |DONE      |22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		Aquaculture-1.16.4-2.1.6.jar                      |Aquaculture 2                 |aquaculture                   |1.16.4-2.1.6        |DONE      |NOSIGNATURE
+		pneumaticcraft-repressurized-1.16.4-2.7.2-86.jar  |PneumaticCraft: Repressurized |pneumaticcraft                |1.16.4-2.7.2-86     |DONE      |NOSIGNATURE
+		BiomesOPlenty-1.16.4-13.0.0.422-universal.jar     |Biomes O' Plenty              |biomesoplenty                 |1.16.4-13.0.0.422   |DONE      |NOSIGNATURE
+		Apotheosis-1.16.3-4.4.1.jar                       |Apotheosis                    |apotheosis                    |4.4.1               |DONE      |NOSIGNATURE
+		cc-tweaked-1.16.4-1.94.0.jar                      |CC: Tweaked                   |computercraft                 |1.94.0              |DONE      |NOSIGNATURE
+		infernalmobs-1.16.2.1.jar                         |Infernal Mobs                 |infernalmobs                  |1.16.2.1            |DONE      |NOSIGNATURE
+		Placebo-1.16.3-4.3.3.jar                          |Placebo                       |placebo                       |4.3.3               |DONE      |NOSIGNATURE
+		comforts-forge-1.16.4-4.0.0.2.jar                 |Comforts                      |comforts                      |1.16.4-4.0.0.2      |DONE      |NOSIGNATURE
+		TravelersBackpack-1.16.4-5.3.1.jar                |Traveler's Backpack           |travelersbackpack             |5.3.1               |DONE      |NOSIGNATURE
+		sit-1.16.2-v1.3.jar                               |Sit                           |sit                           |v1.3                |DONE      |NOSIGNATURE
+	Crash Report UUID: ca99b3ea-e0eb-4154-9a5c-abf482600ca9
+	Player Count: 1 / 20; [ServerPlayerEntity['Elaneli'/6895, l='ServerLevel[world]', x=-748.50, y=51.85, z=529.90]]
+	Data Packs: vanilla, mod:forge, mod:aquaculture (incompatible), mod:computercraft, mod:comforts (incompatible), mod:pneumaticcraft, mod:biomesoplenty, mod:apotheosis (incompatible), mod:infernalmobs (incompatible), mod:placebo (incompatible), mod:sit, mod:travelersbackpack (incompatible), mod:falling_tree
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)
